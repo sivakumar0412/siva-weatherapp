@@ -6,6 +6,11 @@
 }
 body{
     background-color: #222;
+    background-image: url(https://images.pexels.com/photos/186980/pexels-photo-186980.jpeg?cs=srgb&dl=pexels-tahir-shaw-50609-186980.jpg&fm=jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 170vh;
 }
 .card{
     width:90%;
@@ -91,16 +96,109 @@ body{
     display: none;
 }
 .copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: red;
+    color: hsl(0, 100%, 50%);
+    background-color: hsl(254, 98%, 47%);
+    padding: 10px;
+    margin: 200px;
+    border: 4px solid #fff;
+    border-radius: 100px;
+    box-sizing: border-box;
 }
 .myh3{
-    text-shadow: 5px 10px 4px rgba(14, 129, 186, 0.5);
+    text-shadow: 5px 10px 4px hwb(0 0% 2% / 0.5);
     text-align: center;
     font-size: 80px;
-    transition: color 0.3s ease;
-    color:green
+    transition: color 0.2s ease;
+    color:#02f42a;
     }
 .myh3:hover {
-    color:blue;
+    color:hsl(39, 44%, 51%);
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+    .card {
+        padding: 30px 20px;
+    }
+    .search input {
+        height: 50px;
+        font-size: 16px;
+    }
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+    .weather-icon {
+        width: 140px;
+    }
+    .weather h1 {
+        font-size: 70px;
+    }
+    .weather h2 {
+        font-size: 35px;
+    }
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .col {
+        margin-bottom: 20px;
+    }
+    .humidity, .wind {
+        font-size: 25px;
+    }
+    .copy {
+        margin: 100px;
+        padding: 8px;
+    }
+    .myh3 {
+        font-size: 60px;
+    }
+}
+
+/* Laptop devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        height: 150vh;
+    }
+    .card {
+        padding: 35px 25px;
+    }
+    .search input {
+        height: 55px;
+        font-size: 17px;
+    }
+    .search button {
+        width: 55px;
+        height: 55px;
+    }
+    .weather-icon {
+        width: 150px;
+    }
+    .weather h1 {
+        font-size: 75px;
+    }
+    .weather h2 {
+        font-size: 38px;
+    }
+    .details {
+        padding: 0 15px;
+    }
+    .humidity, .wind {
+        font-size: 28px;
+    }
+    .copy {
+        margin: 150px;
+        padding: 9px;
+    }
+    .myh3 {
+        font-size: 70px;
+    }
 }
